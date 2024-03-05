@@ -1,0 +1,12 @@
+services:
+  db-belajar-testing:
+    image: mysql:8
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: yes
+      MYSQL_DATABASE: belajartestingdb
+      MYSQL_USER: belajar
+      MYSQL_PASSWORD: testing
+    ports:
+      - 13306:3306
+    volumes:
+      - ./db-belajar-testing:/var/lib/mysql
